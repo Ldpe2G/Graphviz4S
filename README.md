@@ -12,6 +12,10 @@ To render the generated DOT source code, you also need to install [Graphviz](htt
 Make sure that the directory containing the ``dot`` executable is on your
 systems' path.
 
+If you are using ubuntu, use the following command to install graphviz:
+```bash
+sudo apt-get install graphviz
+```
 
 ##Build
 ```bash
