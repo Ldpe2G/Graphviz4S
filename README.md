@@ -3,7 +3,7 @@
 This project is a simply implementation of the python [Graphviz](https://github.com/xflr6/graphviz) library functionality in Scala.
 
 
-It tries to keep the interface the same with the python [Graphviz](https://github.com/xflr6/graphviz) library, which facilitates the creation and rendering of graph descriptions in the DOT_ language of the Graphviz_ graph drawing software (repo_) from Scala.
+It tries to keep the interface the same with the python [Graphviz](https://github.com/xflr6/graphviz) library, which facilitates the creation and rendering of graph descriptions in the [DOT](http://www.graphviz.org/doc/info/lang.html) language of the [Graphviz](http://www.graphviz.org/) graph drawing software([repo](https://github.com/ellson/graphviz/)) from Scala.
 
 ##Installation
 
