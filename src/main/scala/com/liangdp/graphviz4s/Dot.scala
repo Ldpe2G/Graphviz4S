@@ -77,6 +77,15 @@ abstract class Dot(
     this.body += _edge.format(tailName, headName, attribute(label, attrs))
   }
 
+  /**
+   * Create a bunch of edges.
+   * @param tailName Start node identifier.
+   * @param headNames End nodes identifier.
+   */
+  def edges(tailName: String, headNames: Array[String]): Unit = {
+    edges(headNames.map(h => (tailName, h)))
+  }
+
 /**
  * Create a bunch of edges.
  * @param tailHeads array of (tailName, headName) pairs.
