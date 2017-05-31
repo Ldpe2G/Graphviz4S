@@ -5,7 +5,7 @@ This project is a simply implementation of the python [Graphviz](https://github.
 
 It tries to keep the interface the same with the python [Graphviz](https://github.com/xflr6/graphviz) library, which facilitates the creation and rendering of graph descriptions in the [DOT](http://www.graphviz.org/doc/info/lang.html) language of the [Graphviz](http://www.graphviz.org/) graph drawing software([repo](https://github.com/ellson/graphviz/)) from Scala.
 
-##Installation
+## Installation
 
 To render the generated DOT source code, you also need to install [Graphviz](http://www.graphviz.org/Download.php).
 
@@ -17,23 +17,23 @@ If you are using ubuntu, use the following command to install graphviz:
 sudo apt-get install graphviz
 ```
 
-##Build
+## Build
 ```bash
 bash scripts/build.sh
 ```
 
-##Run examples
+## Run examples
 ```bash
 bash scripts/run_all_examples.sh
 ```
 
-##Quickstart
-###Create a graph object:
+## Quickstart
+### Create a graph object:
 ```scala
 import com.liangdp.graphviz4s.Digraph
 val dot = new Digraph(comment = "The Round Table")
 ```
-###Add nodes and edges:
+### Add nodes and edges:
 ```scala
 dot.node("A", "King Arthur")
 dot.node("B", "Sir Bedevere the Wise")
@@ -43,7 +43,7 @@ import scala.collection.mutable.Map
 dot.edges(Array(("A", "B"), ("A", "L")))
 dot.edge("B", "L", attrs = Map("constraint" -> "false"))
 ```
-###Check the generated source code:
+### Check the generated source code:
 ```scala
 println(dot.source())
 // The Round Table
@@ -56,7 +56,7 @@ digraph {
 		B -> L [ constraint=false]
 }
 ```
-###Save and render the source code, optionally view the result:
+### Save and render the source code, optionally view the result:
 ```scala
 dot.render(fileName = "round-table.gv", directory = ".", view = true)
 ```
