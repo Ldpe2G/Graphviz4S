@@ -1,3 +1,5 @@
+[![996.ICU](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/#/en_US)
+
 # Graphviz4S
 
 This project is a simply implementation of the python [Graphviz](https://github.com/xflr6/graphviz) library functionality in Scala.
