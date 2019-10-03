@@ -4,7 +4,7 @@ import java.io.File
 import java.io.PrintWriter
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.mutable.Map
-
+import com.liangdp.graphviz4s.Backend.viewFileCommand;
 /**
  * Assemble, save, and render DOT source code, open result in viewer.
  * @author Depeng Liang
@@ -213,10 +213,13 @@ abstract class Dot(
    */
   protected def _view(filePath: String, format: String): Unit = {
     import sys.process._
+    var command = viewFileCommand
     try {
-      s"xdg-open $filePath" !
+      s"$command $filePath" !
     } catch { case _ : Throwable =>
-      val errorMsg = s"""no built-in viewer support for $format on Linux platform"""
+      val errorMsg =
+        s"""no built-in viewer support for $command $format
+           |on Linux platform""".stripMargin
       throw new RuntimeException(errorMsg)
     }
   }
