@@ -1,11 +1,21 @@
-mvn exec:java -Dexec.mainClass="com.liangdp.graphviz4s.examples.Cluster"
+ROOT=$(cd "$(dirname $0)/.."; pwd)
 
-mvn exec:java -Dexec.mainClass="com.liangdp.graphviz4s.examples.Er"
+CLASS_PATH=$ROOT/target/scala-2.12/classes/:\
+$HOME/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.8.jar:\
+$HOME/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.5.jar
 
-mvn exec:java -Dexec.mainClass="com.liangdp.graphviz4s.examples.Fsm"
+echo $CLASS_PATH
 
-mvn exec:java -Dexec.mainClass="com.liangdp.graphviz4s.examples.Hello"
+java -Xmx1G -cp $CLASS_PATH com.liangdp.graphviz4s.examples.Cluster
 
-mvn exec:java -Dexec.mainClass="com.liangdp.graphviz4s.examples.Structs"
+java -Xmx1G -cp $CLASS_PATH com.liangdp.graphviz4s.examples.Er
 
-mvn exec:java -Dexec.mainClass="com.liangdp.graphviz4s.examples.Unix"
+java -Xmx1G -cp $CLASS_PATH com.liangdp.graphviz4s.examples.Fsm
+
+java -Xmx1G -cp $CLASS_PATH com.liangdp.graphviz4s.examples.Hello
+
+java -Xmx1G -cp $CLASS_PATH com.liangdp.graphviz4s.examples.Structs
+
+java -Xmx1G -cp $CLASS_PATH com.liangdp.graphviz4s.examples.Unix
+
+
