@@ -19,10 +19,8 @@ If you are using ubuntu, use the following command to install graphviz:
 sudo apt-get install graphviz
 ```
 
-## Build
-```bash
-bash scripts/build.sh
-```
+## Compile
+run ```sbt``` and compile the project
 
 ## Run examples
 ```bash
